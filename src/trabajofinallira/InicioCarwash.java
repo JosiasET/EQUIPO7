@@ -29,7 +29,10 @@ public class InicioCarwash extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_Agendar = new javax.swing.JButton();
+        btn_ListaClientes = new javax.swing.JButton();
+        btn_Servicios = new javax.swing.JButton();
+        btn_Promo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,7 +44,37 @@ public class InicioCarwash extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Barlow Black", 3, 48)); // NOI18N
         jLabel1.setText("CAR WASH");
 
-        jButton1.setText("jButton1");
+        btn_Agendar.setText("Agenda de citas");
+        btn_Agendar.setPreferredSize(new java.awt.Dimension(125, 25));
+        btn_Agendar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_AgendarActionPerformed(evt);
+            }
+        });
+
+        btn_ListaClientes.setText("Lista de clientes");
+        btn_ListaClientes.setPreferredSize(new java.awt.Dimension(125, 25));
+        btn_ListaClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ListaClientesActionPerformed(evt);
+            }
+        });
+
+        btn_Servicios.setText("Servicios");
+        btn_Servicios.setPreferredSize(new java.awt.Dimension(125, 25));
+        btn_Servicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ServiciosActionPerformed(evt);
+            }
+        });
+
+        btn_Promo.setText("Promociones");
+        btn_Promo.setPreferredSize(new java.awt.Dimension(125, 25));
+        btn_Promo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_PromoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -52,8 +85,12 @@ public class InicioCarwash extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(212, 212, 212))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(jButton1)
+                .addGap(114, 114, 114)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_Promo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Servicios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_ListaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Agendar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -62,8 +99,14 @@ public class InicioCarwash extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addComponent(btn_Agendar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_ListaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_Servicios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_Promo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 700, 370));
@@ -85,6 +128,22 @@ public class InicioCarwash extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_AgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AgendarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_AgendarActionPerformed
+
+    private void btn_ListaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ListaClientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_ListaClientesActionPerformed
+
+    private void btn_ServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ServiciosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_ServiciosActionPerformed
+
+    private void btn_PromoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PromoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_PromoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,7 +181,10 @@ public class InicioCarwash extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_Agendar;
+    private javax.swing.JButton btn_ListaClientes;
+    private javax.swing.JButton btn_Promo;
+    private javax.swing.JButton btn_Servicios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
