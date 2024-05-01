@@ -58,11 +58,10 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", tipoVehiculo='" + tipoVehiculo + '\'' +
-                ", horaLavado='" + horaLavado + '\'' +
-                '}';
+        return "\nCliente: " +
+                "\nnombre: " + nombre +
+                "\napellido: " + apellido+
+                "\ntipoVehiculo: " + tipoVehiculo +
+                "\nhoraLavado: " + horaLavado ;
     }
 }

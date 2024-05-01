@@ -44,7 +44,7 @@ public class AgendarCita extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        AlmecenarCliente = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
 
         jLabel6.setText("jLabel6");
@@ -101,9 +101,9 @@ public class AgendarCita extends javax.swing.JFrame {
 
         jButton4.setText("jButton4");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        AlmecenarCliente.setColumns(20);
+        AlmecenarCliente.setRows(5);
+        jScrollPane1.setViewportView(AlmecenarCliente);
 
         jLabel7.setText("LSITA DE CLIENTES ");
 
@@ -197,18 +197,17 @@ public class AgendarCita extends javax.swing.JFrame {
                             .addComponent(Marco_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Hora_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Hora_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(74, 74, 74)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Guardar)
-                            .addComponent(jButton2))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(15, Short.MAX_VALUE))))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -234,7 +233,22 @@ public class AgendarCita extends javax.swing.JFrame {
     }//GEN-LAST:event_Numero_TelefonoActionPerformed
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
-        Cliente cliente= new Cliente ()
+
+        String nombre=Nombre_Tex.getText();
+        String apellido=Numero_Telefono.getText(); 
+        String tipoVehiculo=Marco_Cliente.getText();
+        String horaLavado=Hora_Cliente.getText(); 
+        
+        Cliente cliente= new Cliente(nombre,apellido,tipoVehiculo,horaLavado);
+        
+        AlmecenarCliente.append(cliente.toString());
+        
+        Nombre_Tex.setText("");
+        Numero_Telefono.setText(""); 
+        Marco_Cliente.setText("");
+        Hora_Cliente.setText(""); 
+        
+        
     }//GEN-LAST:event_GuardarActionPerformed
 
     /**
@@ -273,6 +287,7 @@ public class AgendarCita extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea AlmecenarCliente;
     private javax.swing.JButton Guardar;
     private javax.swing.JTextField Hora_Cliente;
     private javax.swing.JTextField Marco_Cliente;
@@ -291,7 +306,6 @@ public class AgendarCita extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
