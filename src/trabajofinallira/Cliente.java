@@ -8,6 +8,9 @@ package trabajofinallira;
  * @author Usuario
  */
 
+
+import java.io.*;
+import java.net.*;
 public class Cliente {
     private String nombre;
     private String apellido;
@@ -63,5 +66,25 @@ public class Cliente {
                 "\napellido: " + apellido+
                 "\ntipoVehiculo: " + tipoVehiculo +
                 "\nhoraLavado: " + horaLavado ;
+    }
+    
+     public void enviarDatosAlServidor() {
+        try {
+            Socket socket = new Socket("192.168.100.48", 12345); // Conectar al servidor en localhost:12345
+            
+            // Obtener el OutputStream para enviar datos al servidor
+            OutputStream outputStream = socket.getOutputStream();
+            PrintWriter escritor = new PrintWriter(outputStream, true);
+            
+            // Enviar los datos del cliente al servidor
+            escritor.println(this.toString());
+            
+            // Cerrar conexiones
+            escritor.close();
+            outputStream.close();
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
