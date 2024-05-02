@@ -16,7 +16,7 @@ public class Cliente {
     private String apellido;
     private String tipoVehiculo;
     private String horaLavado;
-
+    
     // Constructor
     public Cliente(String nombre, String apellido, String tipoVehiculo, String horaLavado) {
         this.nombre = nombre;
@@ -68,6 +68,8 @@ public class Cliente {
                 "\nhoraLavado: " + horaLavado ;
     }
     
+    
+    
      public void enviarDatosAlServidor() {
         try {
             Socket socket = new Socket("192.168.100.48", 12345); // Conectar al servidor en localhost:12345
@@ -87,4 +89,5 @@ public class Cliente {
             e.printStackTrace();
         }
     }
+     
 }

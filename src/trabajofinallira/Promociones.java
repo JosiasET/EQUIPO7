@@ -150,7 +150,13 @@ public class Promociones extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_promo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_promo1ActionPerformed
+        PromocionJpanel1 pr1 = new PromocionJpanel1();
+        pr1.setSize(850, 425);
+        pr1.setLocation(0, 0);
         
+        PanelPromociones.removeAll();
+        PanelPromociones.add(pr1, BorderLayout.CENTER);
+        PanelPromociones.revalidate();
     }//GEN-LAST:event_btn_promo1ActionPerformed
 
     private void btn_promo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_promo3ActionPerformed
@@ -158,7 +164,13 @@ public class Promociones extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_promo3ActionPerformed
 
     private void btn_promo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_promo2ActionPerformed
+        PromocionJpanel2 pr2 = new PromocionJpanel2();
+        pr2.setSize(850, 425);
+        pr2.setLocation(0, 0);
         
+        PanelPromociones.removeAll();
+        PanelPromociones.add(pr2, BorderLayout.CENTER);
+        PanelPromociones.revalidate();
     }//GEN-LAST:event_btn_promo2ActionPerformed
 
     /**

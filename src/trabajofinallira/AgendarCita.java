@@ -234,7 +234,6 @@ public class AgendarCita extends javax.swing.JFrame {
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
         
-        
         String nombre=Nombre_Tex.getText();
         String apellido=Numero_Telefono.getText(); 
         String tipoVehiculo=Marco_Cliente.getText();
@@ -242,8 +241,9 @@ public class AgendarCita extends javax.swing.JFrame {
         
         Cliente cliente= new Cliente(nombre,apellido,tipoVehiculo,horaLavado);
         cliente.enviarDatosAlServidor();
-        
+       
         AlmecenarCliente.append(cliente.toString());
+    
         
         Nombre_Tex.setText("");
         Numero_Telefono.setText(""); 
