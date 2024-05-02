@@ -9,10 +9,7 @@ package trabajofinallira;
  * @author Josty25
  */
 public class InicioCarwash extends javax.swing.JFrame {
-
-    /**
-     * Creates new form InicioCarwash
-     */
+    
     public InicioCarwash() {
         initComponents();
     }
@@ -29,10 +26,13 @@ public class InicioCarwash extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        Coche = new javax.swing.JLabel();
         btn_Agendar = new javax.swing.JButton();
         btn_ListaClientes = new javax.swing.JButton();
         btn_Servicios = new javax.swing.JButton();
         btn_Promo = new javax.swing.JButton();
+        Fondo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,9 +41,19 @@ public class InicioCarwash extends javax.swing.JFrame {
         jPanel1.setRequestFocusEnabled(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Barlow Black", 3, 48)); // NOI18N
-        jLabel1.setText("CAR WASH");
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Barlow Black", 3, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("CAR WASH");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(246, 44, 269, -1));
+
+        Coche.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Imagen-removebg-preview.png")); // NOI18N
+        jPanel2.add(Coche, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
+
+        btn_Agendar.setFont(new java.awt.Font("Impact", 3, 18)); // NOI18N
         btn_Agendar.setText("Agenda de citas");
         btn_Agendar.setPreferredSize(new java.awt.Dimension(125, 25));
         btn_Agendar.addActionListener(new java.awt.event.ActionListener() {
@@ -51,7 +61,9 @@ public class InicioCarwash extends javax.swing.JFrame {
                 btn_AgendarActionPerformed(evt);
             }
         });
+        jPanel2.add(btn_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 200, 40));
 
+        btn_ListaClientes.setFont(new java.awt.Font("Impact", 3, 18)); // NOI18N
         btn_ListaClientes.setText("Lista de clientes");
         btn_ListaClientes.setPreferredSize(new java.awt.Dimension(125, 25));
         btn_ListaClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +71,9 @@ public class InicioCarwash extends javax.swing.JFrame {
                 btn_ListaClientesActionPerformed(evt);
             }
         });
+        jPanel2.add(btn_ListaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 200, 40));
 
+        btn_Servicios.setFont(new java.awt.Font("Impact", 3, 18)); // NOI18N
         btn_Servicios.setText("Servicios");
         btn_Servicios.setPreferredSize(new java.awt.Dimension(125, 25));
         btn_Servicios.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +81,9 @@ public class InicioCarwash extends javax.swing.JFrame {
                 btn_ServiciosActionPerformed(evt);
             }
         });
+        jPanel2.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 200, 40));
 
+        btn_Promo.setFont(new java.awt.Font("Impact", 3, 18)); // NOI18N
         btn_Promo.setText("Promociones");
         btn_Promo.setPreferredSize(new java.awt.Dimension(125, 25));
         btn_Promo.addActionListener(new java.awt.event.ActionListener() {
@@ -75,41 +91,18 @@ public class InicioCarwash extends javax.swing.JFrame {
                 btn_PromoActionPerformed(evt);
             }
         });
+        jPanel2.add(btn_Promo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 200, 40));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(219, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(212, 212, 212))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_Promo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_Servicios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_ListaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_Agendar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(btn_Agendar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_ListaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_Servicios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_Promo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
-        );
+        Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Panelcentro.jpg")); // NOI18N
+        jPanel2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 390));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 700, 370));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 700, 390));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Fondos.jpg")); // NOI18N
+        jLabel2.setMaximumSize(new java.awt.Dimension(1000, 500));
+        jLabel2.setMinimumSize(new java.awt.Dimension(1000, 500));
+        jLabel2.setPreferredSize(new java.awt.Dimension(1000, 40));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,7 +123,9 @@ public class InicioCarwash extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_AgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AgendarActionPerformed
-        // TODO add your handling code here:
+        AgendarCita g = new AgendarCita();
+        g.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_AgendarActionPerformed
 
     private void btn_ListaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ListaClientesActionPerformed
@@ -142,7 +137,9 @@ public class InicioCarwash extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ServiciosActionPerformed
 
     private void btn_PromoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PromoActionPerformed
-        // TODO add your handling code here:
+        Promociones p = new Promociones();
+        p.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_PromoActionPerformed
 
     /**
@@ -181,11 +178,14 @@ public class InicioCarwash extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Coche;
+    private javax.swing.JLabel Fondo;
     private javax.swing.JButton btn_Agendar;
     private javax.swing.JButton btn_ListaClientes;
     private javax.swing.JButton btn_Promo;
     private javax.swing.JButton btn_Servicios;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

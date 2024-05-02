@@ -46,6 +46,7 @@ public class AgendarCita extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         AlmecenarCliente = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
+        btn_regresar = new javax.swing.JButton();
 
         jLabel6.setText("jLabel6");
 
@@ -143,12 +144,21 @@ public class AgendarCita extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
         );
 
+        btn_regresar.setText("<--");
+        btn_regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_regresarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(16, 16, 16)
+                .addComponent(btn_regresar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(276, 276, 276))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -181,7 +191,9 @@ public class AgendarCita extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_regresar))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(80, 80, 80)
@@ -253,6 +265,12 @@ public class AgendarCita extends javax.swing.JFrame {
         
     }//GEN-LAST:event_GuardarActionPerformed
 
+    private void btn_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresarActionPerformed
+        InicioCarwash in = new InicioCarwash();
+        in.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_regresarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -295,6 +313,7 @@ public class AgendarCita extends javax.swing.JFrame {
     private javax.swing.JTextField Marco_Cliente;
     private javax.swing.JTextField Nombre_Tex;
     private javax.swing.JTextField Numero_Telefono;
+    private javax.swing.JButton btn_regresar;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

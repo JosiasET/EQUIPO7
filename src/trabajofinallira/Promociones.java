@@ -50,13 +50,21 @@ public class Promociones extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 600));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_regresar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btn_regresar.setText("<--");
+        btn_regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_regresarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 48, 68, 30));
 
         jLabel1.setFont(new java.awt.Font("Barlow Black", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("PROMOCIONES");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 22, -1, -1));
 
         PanelPromociones.setBackground(new java.awt.Color(0, 0, 0));
         PanelPromociones.setPreferredSize(new java.awt.Dimension(850, 435));
@@ -72,12 +80,15 @@ public class Promociones extends javax.swing.JFrame {
             .addGap(0, 435, Short.MAX_VALUE)
         );
 
+        jPanel1.add(PanelPromociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 143, -1, -1));
+
         btn_promo1.setText("1er Promociones");
         btn_promo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_promo1ActionPerformed(evt);
             }
         });
+        jPanel1.add(btn_promo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 104, -1, -1));
 
         btn_promo2.setText("2da Promociones");
         btn_promo2.addActionListener(new java.awt.event.ActionListener() {
@@ -85,6 +96,7 @@ public class Promociones extends javax.swing.JFrame {
                 btn_promo2ActionPerformed(evt);
             }
         });
+        jPanel1.add(btn_promo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 104, -1, -1));
 
         btn_promo3.setText("3ra Promociones");
         btn_promo3.addActionListener(new java.awt.event.ActionListener() {
@@ -92,44 +104,7 @@ public class Promociones extends javax.swing.JFrame {
                 btn_promo3ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(btn_regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(286, 286, 286)
-                .addComponent(jLabel1))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(177, 177, 177)
-                .addComponent(btn_promo1)
-                .addGap(165, 165, 165)
-                .addComponent(btn_promo2)
-                .addGap(172, 172, 172)
-                .addComponent(btn_promo3))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(PanelPromociones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(btn_regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_promo1)
-                    .addComponent(btn_promo2)
-                    .addComponent(btn_promo3))
-                .addGap(12, 12, 12)
-                .addComponent(PanelPromociones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jPanel1.add(btn_promo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 104, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -172,6 +147,12 @@ public class Promociones extends javax.swing.JFrame {
         PanelPromociones.add(pr2, BorderLayout.CENTER);
         PanelPromociones.revalidate();
     }//GEN-LAST:event_btn_promo2ActionPerformed
+
+    private void btn_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresarActionPerformed
+        InicioCarwash i = new InicioCarwash();
+        i.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_regresarActionPerformed
 
     /**
      * @param args the command line arguments
