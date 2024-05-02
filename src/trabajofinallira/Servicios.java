@@ -4,11 +4,15 @@
  */
 package trabajofinallira;
 
+import com.mycompany.proyectofinal.Imagenes.PanelesAparte.ServicioBasicoYVip;
+import com.mycompany.proyectofinal.Imagenes.PanelesAparte.ServicioSelecto;
+import java.awt.BorderLayout;
+
 /**
  *
  * @author Josty25
  */
-public class Servicios extends javax.swing.JFrame {
+public class Servicios extends javax.swing.JFrame{
 
     /**
      * Creates new form Servicios
@@ -16,6 +20,15 @@ public class Servicios extends javax.swing.JFrame {
     public Servicios() {
         initComponents();
         setLocationRelativeTo(null);
+        
+        com.mycompany.proyectofinal.Imagenes.PanelesAparte.ServicioBasicoYVip s = new ServicioBasicoYVip();
+        s.setSize(850, 500);
+        s.setLocation(0, 0);
+        
+        PanellMostrar.removeAll();
+        PanellMostrar.add(s, BorderLayout.CENTER);
+        PanellMostrar.revalidate();
+        
     }
 
     /**
@@ -27,14 +40,17 @@ public class Servicios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        PanelPrincipal = new javax.swing.JPanel();
         Regresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        PanellMostrar = new javax.swing.JPanel();
+        mostrarServicio1 = new javax.swing.JButton();
+        MostrarServicios2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 500));
+        PanelPrincipal.setBackground(new java.awt.Color(0, 0, 0));
+        PanelPrincipal.setPreferredSize(new java.awt.Dimension(1000, 600));
 
         Regresar.setText("<----");
         Regresar.addActionListener(new java.awt.event.ActionListener() {
@@ -48,28 +64,71 @@ public class Servicios extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("SERVICIOS");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(Regresar)
-                .addGap(317, 317, 317)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(300, 300, 300))
+        PanellMostrar.setPreferredSize(new java.awt.Dimension(850, 500));
+
+        javax.swing.GroupLayout PanellMostrarLayout = new javax.swing.GroupLayout(PanellMostrar);
+        PanellMostrar.setLayout(PanellMostrarLayout);
+        PanellMostrarLayout.setHorizontalGroup(
+            PanellMostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 850, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        PanellMostrarLayout.setVerticalGroup(
+            PanellMostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 500, Short.MAX_VALUE)
+        );
+
+        mostrarServicio1.setText("1er Servicio");
+        mostrarServicio1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrarServicio1ActionPerformed(evt);
+            }
+        });
+
+        MostrarServicios2.setText("2do Servicio");
+        MostrarServicios2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MostrarServicios2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelPrincipalLayout = new javax.swing.GroupLayout(PanelPrincipal);
+        PanelPrincipal.setLayout(PanelPrincipalLayout);
+        PanelPrincipalLayout.setHorizontalGroup(
+            PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelPrincipalLayout.createSequentialGroup()
+                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(PanellMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(Regresar)
+                        .addGap(130, 130, 130)
+                        .addComponent(mostrarServicio1)
+                        .addGap(103, 103, 103)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(118, 118, 118)
+                        .addComponent(MostrarServicios2)))
+                .addContainerGap(76, Short.MAX_VALUE))
+        );
+        PanelPrincipalLayout.setVerticalGroup(
+            PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelPrincipalLayout.createSequentialGroup()
+                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addComponent(Regresar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Regresar)
+                            .addComponent(mostrarServicio1))
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(418, Short.MAX_VALUE))
+                        .addComponent(MostrarServicios2)
+                        .addGap(18, 18, 18)))
+                .addComponent(PanellMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelPrincipalLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -77,13 +136,13 @@ public class Servicios extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -95,6 +154,28 @@ public class Servicios extends javax.swing.JFrame {
         car.setVisible(true);
         dispose();
     }//GEN-LAST:event_RegresarActionPerformed
+
+    private void mostrarServicio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarServicio1ActionPerformed
+        com.mycompany.proyectofinal.Imagenes.PanelesAparte.ServicioBasicoYVip s = new ServicioBasicoYVip();
+        s.setSize(850, 500);
+        s.setLocation(0, 0);
+        
+        
+        
+        PanellMostrar.removeAll();
+        PanellMostrar.add(s, BorderLayout.CENTER);
+        PanellMostrar.revalidate();
+    }//GEN-LAST:event_mostrarServicio1ActionPerformed
+
+    private void MostrarServicios2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarServicios2ActionPerformed
+        com.mycompany.proyectofinal.Imagenes.PanelesAparte.ServicioSelecto ser = new ServicioSelecto();
+        ser.setSize(850, 500);
+        ser.setLocation(0, 0);
+        
+        PanellMostrar.removeAll();
+        PanellMostrar.add(ser, BorderLayout.CENTER);
+        PanellMostrar.revalidate();
+    }//GEN-LAST:event_MostrarServicios2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,8 +213,12 @@ public class Servicios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton MostrarServicios2;
+    private javax.swing.JPanel PanelPrincipal;
+    private javax.swing.JPanel PanellMostrar;
     private javax.swing.JButton Regresar;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton mostrarServicio1;
     // End of variables declaration//GEN-END:variables
+
 }

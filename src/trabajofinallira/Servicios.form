@@ -24,7 +24,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="PanelPrincipal" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -32,20 +32,20 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="PanelPrincipal" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="PanelPrincipal">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="66" red="0" type="rgb"/>
+          <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1000, 500]"/>
+          <Dimension value="[1000, 600]"/>
         </Property>
       </Properties>
 
@@ -53,11 +53,23 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                  <Component id="Regresar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="317" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" pref="229" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                          <Component id="PanellMostrar" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                          <Component id="Regresar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="mostrarServicio1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" pref="229" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                          <Component id="MostrarServicios2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="76" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -67,14 +79,23 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
-                          <Component id="Regresar" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Regresar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="mostrarServicio1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="76" max="-2" attributes="0"/>
+                          <Component id="MostrarServicios2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="418" max="32767" attributes="0"/>
+                  <Component id="PanellMostrar" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" pref="76" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -101,6 +122,42 @@
             </Property>
             <Property name="text" type="java.lang.String" value="SERVICIOS"/>
           </Properties>
+        </Component>
+        <Container class="javax.swing.JPanel" name="PanellMostrar">
+          <Properties>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[850, 500]"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="850" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="500" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Component class="javax.swing.JButton" name="mostrarServicio1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1er Servicio"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mostrarServicio1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="MostrarServicios2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2do Servicio"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MostrarServicios2ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
