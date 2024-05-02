@@ -7,11 +7,9 @@ package trabajofinallira;
  */
 public class TrabajoFinalLira {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        InicioCarwash i = new InicioCarwash();
+        i.setVisible(true);
+        
     }
-    
 }

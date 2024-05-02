@@ -126,7 +126,7 @@ public class Promociones extends javax.swing.JFrame {
 
     private void btn_promo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_promo1ActionPerformed
         PromocionJpanel1 pr1 = new PromocionJpanel1();
-        pr1.setSize(850, 425);
+        pr1.setSize(850, 435);
         pr1.setLocation(0, 0);
         
         PanelPromociones.removeAll();
@@ -135,16 +135,22 @@ public class Promociones extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_promo1ActionPerformed
 
     private void btn_promo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_promo3ActionPerformed
+        PromocionesJpanel3 p3 = new PromocionesJpanel3();
+        p3.setSize(850, 435);
+        p3.setLocation(0, 0);
         
+        PanelPromociones.removeAll();
+        PanelPromociones.add(p3, BorderLayout.CENTER);
+        PanelPromociones.revalidate();
     }//GEN-LAST:event_btn_promo3ActionPerformed
 
     private void btn_promo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_promo2ActionPerformed
-        PromocionJpanel2 pr2 = new PromocionJpanel2();
-        pr2.setSize(850, 425);
-        pr2.setLocation(0, 0);
+        PromocionesJpanel2 p2 = new PromocionesJpanel2();
+        p2.setSize(850, 435);
+        p2.setLocation(0, 0);
         
         PanelPromociones.removeAll();
-        PanelPromociones.add(pr2, BorderLayout.CENTER);
+        PanelPromociones.add(p2, BorderLayout.CENTER);
         PanelPromociones.revalidate();
     }//GEN-LAST:event_btn_promo2ActionPerformed
 

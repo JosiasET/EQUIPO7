@@ -106,7 +106,7 @@ public class AgendarCita extends javax.swing.JFrame {
         AlmecenarCliente.setRows(5);
         jScrollPane1.setViewportView(AlmecenarCliente);
 
-        jLabel7.setText("LSITA DE CLIENTES ");
+        jLabel7.setText("LISTA DE CLIENTES ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

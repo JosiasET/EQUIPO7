@@ -12,6 +12,7 @@ public class InicioCarwash extends javax.swing.JFrame {
     
     public InicioCarwash() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -46,12 +47,12 @@ public class InicioCarwash extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Barlow Black", 3, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("CAR WASH");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(246, 44, 269, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 269, -1));
 
         Coche.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Imagen-removebg-preview.png")); // NOI18N
-        jPanel2.add(Coche, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
+        jPanel2.add(Coche, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
 
         btn_Agendar.setFont(new java.awt.Font("Impact", 3, 18)); // NOI18N
         btn_Agendar.setText("Agenda de citas");
@@ -93,10 +94,10 @@ public class InicioCarwash extends javax.swing.JFrame {
         });
         jPanel2.add(btn_Promo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 200, 40));
 
-        Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Panelcentro.jpg")); // NOI18N
-        jPanel2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 390));
+        Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondoInicio.jpg")); // NOI18N
+        jPanel2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 700, 390));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 700, 390));
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Fondos.jpg")); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(1000, 500));
@@ -108,15 +109,11 @@ public class InicioCarwash extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 863, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -133,7 +130,9 @@ public class InicioCarwash extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ListaClientesActionPerformed
 
     private void btn_ServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ServiciosActionPerformed
-        // TODO add your handling code here:
+        Servicios s = new Servicios();
+        s.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_ServiciosActionPerformed
 
     private void btn_PromoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PromoActionPerformed
