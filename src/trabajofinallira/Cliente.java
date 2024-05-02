@@ -72,7 +72,7 @@ public class Cliente {
     
      public void enviarDatosAlServidor() {
         try {
-            Socket socket = new Socket("192.168.100.48", 12345); // Conectar al servidor en localhost:12345
+            Socket socket = new Socket("192.168.1.110", 12345); // Conectar al servidor en localhost:12345
             
             // Obtener el OutputStream para enviar datos al servidor
             OutputStream outputStream = socket.getOutputStream();

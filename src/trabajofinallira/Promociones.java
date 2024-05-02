@@ -17,6 +17,7 @@ public class Promociones extends javax.swing.JFrame {
      */
     public Promociones() {
         initComponents();
+        setLocationRelativeTo(null);
         
         
         PromocionJpanel1 pr1 = new PromocionJpanel1();

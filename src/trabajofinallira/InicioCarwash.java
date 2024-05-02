@@ -126,7 +126,9 @@ public class InicioCarwash extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_AgendarActionPerformed
 
     private void btn_ListaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ListaClientesActionPerformed
-        // TODO add your handling code here:
+        ListaDeClientes l = new ListaDeClientes();
+        l.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_ListaClientesActionPerformed
 
     private void btn_ServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ServiciosActionPerformed
