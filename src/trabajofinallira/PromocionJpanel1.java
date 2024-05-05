@@ -37,16 +37,12 @@ public class PromocionJpanel1 extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(850, 435));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\img1.jpg")); // NOI18N
-
         btn_Reservar1.setText("Reservar");
         btn_Reservar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Reservar1ActionPerformed(evt);
             }
         });
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\img2.jpg")); // NOI18N
 
         btn_Reservar2.setText("Reservar");
         btn_Reservar2.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +79,7 @@ public class PromocionJpanel1 extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_Reservar2)
                     .addComponent(btn_Reservar1))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(397, Short.MAX_VALUE))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, -1));
