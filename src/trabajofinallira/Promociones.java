@@ -159,6 +159,9 @@ public class Promociones extends javax.swing.JFrame {
         PanelPromociones.revalidate();
     }//GEN-LAST:event_btn_promo1ActionPerformed
 
+    public void init(){
+        
+    }
     private void btn_promo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_promo3ActionPerformed
         PromocionesJpanel3 p3 = new PromocionesJpanel3();
         p3.setSize(850, 435);
