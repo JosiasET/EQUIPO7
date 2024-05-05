@@ -28,9 +28,9 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btn_Agendar = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btn_Servicios = new javax.swing.JButton();
+        btn_Promociones = new javax.swing.JButton();
+        btn_apuntes = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,14 +46,19 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel1.add(btn_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 210, -1));
 
-        jButton3.setText("SERVICIOS");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 210, -1));
+        btn_Servicios.setText("SERVICIOS");
+        jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 210, -1));
 
-        jButton4.setText("PROMOCIONES");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 210, -1));
+        btn_Promociones.setText("PROMOCIONES");
+        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 210, -1));
 
-        jButton5.setText("APUNTES");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 210, -1));
+        btn_apuntes.setText("APUNTES");
+        btn_apuntes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_apuntesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_apuntes, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 210, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondosPs3.jpg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -81,6 +86,10 @@ public class Principal extends javax.swing.JFrame {
         a.setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_AgendarActionPerformed
+
+    private void btn_apuntesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_apuntesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_apuntesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,9 +128,9 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Agendar;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btn_Promociones;
+    private javax.swing.JButton btn_Servicios;
+    private javax.swing.JButton btn_apuntes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
