@@ -37,9 +37,11 @@ public class ServicioBasicoYVip extends javax.swing.JPanel{
         btn_ReservarServicio1 = new javax.swing.JButton();
         btn_ReservarServicio2 = new javax.swing.JButton();
 
+        setOpaque(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(850, 500));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\ServicioBasico.jpeg")); // NOI18N

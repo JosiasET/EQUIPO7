@@ -46,11 +46,13 @@ public class Servicios extends javax.swing.JFrame{
         PanellMostrar = new javax.swing.JPanel();
         mostrarServicio1 = new javax.swing.JButton();
         MostrarServicios2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PanelPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         PanelPrincipal.setPreferredSize(new java.awt.Dimension(1000, 600));
+        PanelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Regresar.setText("<----");
         Regresar.addActionListener(new java.awt.event.ActionListener() {
@@ -58,11 +60,13 @@ public class Servicios extends javax.swing.JFrame{
                 RegresarActionPerformed(evt);
             }
         });
+        PanelPrincipal.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 34, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Impact", 3, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("SERVICIOS");
+        PanelPrincipal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 6, 229, 76));
 
         PanellMostrar.setPreferredSize(new java.awt.Dimension(850, 500));
 
@@ -77,12 +81,15 @@ public class Servicios extends javax.swing.JFrame{
             .addGap(0, 500, Short.MAX_VALUE)
         );
 
+        PanelPrincipal.add(PanellMostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 80, -1, -1));
+
         mostrarServicio1.setText("1er Servicio");
         mostrarServicio1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mostrarServicio1ActionPerformed(evt);
             }
         });
+        PanelPrincipal.add(mostrarServicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 34, -1, -1));
 
         MostrarServicios2.setText("2do Servicio");
         MostrarServicios2.addActionListener(new java.awt.event.ActionListener() {
@@ -90,46 +97,10 @@ public class Servicios extends javax.swing.JFrame{
                 MostrarServicios2ActionPerformed(evt);
             }
         });
+        PanelPrincipal.add(MostrarServicios2, new org.netbeans.lib.awtextra.AbsoluteConstraints(769, 35, -1, -1));
 
-        javax.swing.GroupLayout PanelPrincipalLayout = new javax.swing.GroupLayout(PanelPrincipal);
-        PanelPrincipal.setLayout(PanelPrincipalLayout);
-        PanelPrincipalLayout.setHorizontalGroup(
-            PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(PanellMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(Regresar)
-                        .addGap(130, 130, 130)
-                        .addComponent(mostrarServicio1)
-                        .addGap(103, 103, 103)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(118, 118, 118)
-                        .addComponent(MostrarServicios2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        PanelPrincipalLayout.setVerticalGroup(
-            PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Regresar)
-                            .addComponent(mostrarServicio1))
-                        .addGap(19, 19, 19))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(MostrarServicios2)
-                        .addGap(18, 18, 18)))
-                .addComponent(PanellMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondosPs3.jpg")); // NOI18N
+        PanelPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,6 +188,7 @@ public class Servicios extends javax.swing.JFrame{
     private javax.swing.JPanel PanelPrincipal;
     private javax.swing.JPanel PanellMostrar;
     private javax.swing.JButton Regresar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton mostrarServicio1;
     // End of variables declaration//GEN-END:variables

@@ -58,13 +58,14 @@ public class Promociones extends javax.swing.JFrame {
         btn_regresar.setBackground(new java.awt.Color(0, 51, 204));
         btn_regresar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_regresar.setForeground(new java.awt.Color(255, 255, 255));
-        btn_regresar.setText("Salir");
+        btn_regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Imagen_regreso.png"))); // NOI18N
+        btn_regresar.setContentAreaFilled(false);
         btn_regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_regresarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 48, 68, 30));
+        jPanel1.add(btn_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 48, 80, 50));
 
         jLabel1.setFont(new java.awt.Font("Barlow Black", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 204));
@@ -90,6 +91,8 @@ public class Promociones extends javax.swing.JFrame {
 
         btn_promo1.setBackground(new java.awt.Color(51, 255, 204));
         btn_promo1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn_promo1.setForeground(new java.awt.Color(0, 0, 0));
+        btn_promo1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Precios.png")); // NOI18N
         btn_promo1.setText("1er Promociones");
         btn_promo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,10 +100,14 @@ public class Promociones extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn_promo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+
+        jLabel2Oferta.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Ofertas XD.png")); // NOI18N
         jPanel1.add(jLabel2Oferta, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, -1, -1));
 
         btn_promo2.setBackground(new java.awt.Color(102, 255, 204));
         btn_promo2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn_promo2.setForeground(new java.awt.Color(0, 0, 0));
+        btn_promo2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Precios.png")); // NOI18N
         btn_promo2.setText("2da Promociones");
         btn_promo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +118,8 @@ public class Promociones extends javax.swing.JFrame {
 
         btn_promo3.setBackground(new java.awt.Color(51, 255, 204));
         btn_promo3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn_promo3.setForeground(new java.awt.Color(0, 0, 0));
+        btn_promo3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Precios.png")); // NOI18N
         btn_promo3.setText("3ra Promociones");
         btn_promo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +128,7 @@ public class Promociones extends javax.swing.JFrame {
         });
         jPanel1.add(btn_promo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, -1, -1));
 
-        jLabel2Fondo.setText("jLabel2");
+        jLabel2Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondosPs3.jpg")); // NOI18N
         jPanel1.add(jLabel2Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

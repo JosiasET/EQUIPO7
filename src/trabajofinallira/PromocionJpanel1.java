@@ -43,7 +43,7 @@ public class PromocionJpanel1 extends javax.swing.JPanel {
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(850, 450));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\img1.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\imagen1.jpg")); // NOI18N
 
         btn_Reservar1.setText("Reservar");
         btn_Reservar1.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +59,7 @@ public class PromocionJpanel1 extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\img2.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\imagen2.jpg")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -76,7 +76,7 @@ public class PromocionJpanel1 extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(75, 75, 75)
                 .addComponent(jLabel3)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

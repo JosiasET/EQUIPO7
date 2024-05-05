@@ -34,10 +34,12 @@ public class ServicioSelecto extends javax.swing.JPanel {
         btn_ServicioSelecto = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(51, 51, 51));
+        setOpaque(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setMinimumSize(new java.awt.Dimension(850, 500));
+        jPanel1.setOpaque(false);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\ServicioSelecto.jpeg")); // NOI18N
 

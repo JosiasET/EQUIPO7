@@ -55,7 +55,7 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="75" max="32767" attributes="0"/>
+                  <EmptySpace pref="77" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -87,7 +87,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Josty25\Documents\NetBeansProjects\EQUIPO7\src\com\mycompany\proyectofinal\Imagenes\img1.jpg"/>
+              <Image iconType="2" name="C:\Users\Josty25\Documents\NetBeansProjects\EQUIPO7\src\com\mycompany\proyectofinal\Imagenes\imagen1.jpg"/>
             </Property>
           </Properties>
         </Component>
@@ -110,7 +110,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Josty25\Documents\NetBeansProjects\EQUIPO7\src\com\mycompany\proyectofinal\Imagenes\img2.jpg"/>
+              <Image iconType="2" name="C:\Users\Josty25\Documents\NetBeansProjects\EQUIPO7\src\com\mycompany\proyectofinal\Imagenes\imagen2.jpg"/>
             </Property>
           </Properties>
         </Component>
