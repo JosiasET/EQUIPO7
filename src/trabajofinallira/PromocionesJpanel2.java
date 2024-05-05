@@ -4,6 +4,8 @@
  */
 package trabajofinallira;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Josty25
@@ -32,9 +34,11 @@ public class PromocionesJpanel2 extends javax.swing.JPanel {
         btn_Reservar3 = new javax.swing.JButton();
         btn_Reservar4 = new javax.swing.JButton();
 
+        setOpaque(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(850, 435));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\img3.jpg")); // NOI18N
@@ -42,8 +46,18 @@ public class PromocionesJpanel2 extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\img4.jpg")); // NOI18N
 
         btn_Reservar3.setText("Reservar");
+        btn_Reservar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Reservar3ActionPerformed(evt);
+            }
+        });
 
         btn_Reservar4.setText("Reservar");
+        btn_Reservar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Reservar4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -77,6 +91,18 @@ public class PromocionesJpanel2 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_Reservar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Reservar3ActionPerformed
+        AgendarCita a = new AgendarCita();
+        a.setVisible(true);
+        SwingUtilities.getWindowAncestor(PromocionesJpanel2.this).dispose();
+    }//GEN-LAST:event_btn_Reservar3ActionPerformed
+
+    private void btn_Reservar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Reservar4ActionPerformed
+        AgendarCita a = new AgendarCita();
+        a.setVisible(true);
+        SwingUtilities.getWindowAncestor(PromocionesJpanel2.this).dispose();
+    }//GEN-LAST:event_btn_Reservar4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

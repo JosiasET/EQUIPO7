@@ -4,7 +4,9 @@
  */
 package com.mycompany.proyectofinal.Imagenes.PanelesAparte;
 
+import javax.swing.SwingUtilities;
 import trabajofinallira.AgendarCita;
+import trabajofinallira.PromocionesJpanel2;
 import trabajofinallira.Servicios;
 
 /**
@@ -93,13 +95,15 @@ public class ServicioBasicoYVip extends javax.swing.JPanel{
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_ReservarServicio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ReservarServicio1ActionPerformed
-        trabajofinallira.AgendarCita a = new AgendarCita();
+        AgendarCita a = new AgendarCita();
         a.setVisible(true);
-        
+        SwingUtilities.getWindowAncestor(ServicioBasicoYVip.this).dispose();
     }//GEN-LAST:event_btn_ReservarServicio1ActionPerformed
 
     private void btn_ReservarServicio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ReservarServicio2ActionPerformed
-        // TODO add your handling code here:
+        AgendarCita a = new AgendarCita();
+        a.setVisible(true);
+        SwingUtilities.getWindowAncestor(ServicioBasicoYVip.this).dispose();
     }//GEN-LAST:event_btn_ReservarServicio2ActionPerformed
 
 

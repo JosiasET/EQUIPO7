@@ -4,6 +4,9 @@
  */
 package com.mycompany.proyectofinal.Imagenes.PanelesAparte;
 
+import javax.swing.SwingUtilities;
+import trabajofinallira.AgendarCita;
+
 /**
  *
  * @author Josty25
@@ -39,6 +42,11 @@ public class ServicioSelecto extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\ServicioSelecto.jpeg")); // NOI18N
 
         btn_ServicioSelecto.setText("Reservar");
+        btn_ServicioSelecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ServicioSelectoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -65,6 +73,12 @@ public class ServicioSelecto extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_ServicioSelectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ServicioSelectoActionPerformed
+        AgendarCita a = new AgendarCita();
+        a.setVisible(true);
+        SwingUtilities.getWindowAncestor(ServicioSelecto.this).dispose();
+    }//GEN-LAST:event_btn_ServicioSelectoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
