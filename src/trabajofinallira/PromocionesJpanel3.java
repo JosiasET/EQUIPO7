@@ -4,6 +4,8 @@
  */
 package trabajofinallira;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Josty25
@@ -40,6 +42,11 @@ public class PromocionesJpanel3 extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\img5.jpg")); // NOI18N
 
         btn_Reservar5.setText("Reservar");
+        btn_Reservar5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Reservar5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -67,6 +74,12 @@ public class PromocionesJpanel3 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_Reservar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Reservar5ActionPerformed
+        AgendarCita a = new AgendarCita();
+        a.setVisible(true);
+        SwingUtilities.getWindowAncestor(PromocionesJpanel3.this).dispose();
+    }//GEN-LAST:event_btn_Reservar5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
