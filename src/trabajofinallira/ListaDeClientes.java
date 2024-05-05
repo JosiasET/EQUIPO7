@@ -71,16 +71,18 @@ public class ListaDeClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        InicioCarwash s = new InicioCarwash();
-        s.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_RegresarActionPerformed
 
     
     
     public void agregarDatos(){
         AgendarCita a = new AgendarCita();
-        a.add(AreaDeLista);
+        String datos[];
+        
+        
+        
+        
         
     }
     public static void main(String args[]) {

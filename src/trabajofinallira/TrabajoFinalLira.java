@@ -8,7 +8,7 @@ package trabajofinallira;
 public class TrabajoFinalLira {
 
     public static void main(String[] args) {
-        InicioCarwash i = new InicioCarwash();
+        Principal i = new  Principal();
         i.setVisible(true);
         
     }

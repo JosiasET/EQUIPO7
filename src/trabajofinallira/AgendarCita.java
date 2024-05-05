@@ -47,6 +47,8 @@ public class AgendarCita extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         AlmecenarCliente = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        Tipo_Servicios = new javax.swing.JTextField();
 
         jLabel6.setText("jLabel6");
 
@@ -145,6 +147,10 @@ public class AgendarCita extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
         );
 
+        jLabel8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("SERVICIO O PROMOCION: ");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -167,12 +173,15 @@ public class AgendarCita extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(33, 33, 33)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Marco_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Hora_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Nombre_Tex, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(Marco_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Hora_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Nombre_Tex, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(Tipo_Servicios, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -204,7 +213,11 @@ public class AgendarCita extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Hora_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(74, 74, 74)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Tipo_Servicios, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Guardar)
                             .addComponent(btn_Regresar)))
@@ -242,8 +255,9 @@ public class AgendarCita extends javax.swing.JFrame {
         String apellido=Numero_Telefono.getText(); 
         String tipoVehiculo=Marco_Cliente.getText();
         String horaLavado=Hora_Cliente.getText(); 
+        String tip = Tipo_Servicios.getText();
         
-        Cliente cliente= new Cliente(nombre,apellido,tipoVehiculo,horaLavado);
+        Cliente cliente= new Cliente(nombre,apellido,tipoVehiculo,horaLavado, tip);
         cliente.enviarDatosAlServidor();
        
         AlmecenarCliente.append(cliente.toString());
@@ -252,13 +266,14 @@ public class AgendarCita extends javax.swing.JFrame {
         Nombre_Tex.setText("");
         Numero_Telefono.setText(""); 
         Marco_Cliente.setText("");
-        Hora_Cliente.setText(""); 
+        Hora_Cliente.setText("");
+        Tipo_Servicios.setText("");
         
         
     }//GEN-LAST:event_GuardarActionPerformed
 
     private void btn_RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegresarActionPerformed
-        InicioCarwash i = new InicioCarwash();
+        Principal i = new Principal();
         i.setVisible(true);
         dispose();        
     }//GEN-LAST:event_btn_RegresarActionPerformed
@@ -309,6 +324,7 @@ public class AgendarCita extends javax.swing.JFrame {
     private javax.swing.JTextField Marco_Cliente;
     private javax.swing.JTextField Nombre_Tex;
     private javax.swing.JTextField Numero_Telefono;
+    private javax.swing.JTextField Tipo_Servicios;
     private javax.swing.JButton btn_Editar;
     private javax.swing.JButton btn_Regresar;
     private javax.swing.JLabel jLabel1;
@@ -318,6 +334,7 @@ public class AgendarCita extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

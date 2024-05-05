@@ -121,7 +121,7 @@ public class Servicios extends javax.swing.JFrame{
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        InicioCarwash car = new InicioCarwash();
+        Principal car = new Principal();
         car.setVisible(true);
         dispose();
     }//GEN-LAST:event_RegresarActionPerformed

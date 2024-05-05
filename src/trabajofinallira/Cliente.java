@@ -16,13 +16,15 @@ public class Cliente {
     private String apellido;
     private String tipoVehiculo;
     private String horaLavado;
+    private String tipo;
     
     // Constructor
-    public Cliente(String nombre, String apellido, String tipoVehiculo, String horaLavado) {
+    public Cliente(String nombre, String apellido, String tipoVehiculo, String horaLavado, String tip) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.tipoVehiculo = tipoVehiculo;
         this.horaLavado = horaLavado;
+        this.tipo = tip;
     }
 
     // Getters y Setters para todos los atributos
@@ -59,20 +61,29 @@ public class Cliente {
         this.horaLavado = horaLavado;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "\nCliente: " +
                 "\nnombre: " + nombre +
                 "\napellido: " + apellido+
                 "\ntipoVehiculo: " + tipoVehiculo +
-                "\nhoraLavado: " + horaLavado ;
+                "\nhoraLavado: " + horaLavado +
+                "\nServicio: "+ tipo;
     }
-    
-    
-    
+        
      public void enviarDatosAlServidor() {
         try {
-            Socket socket = new Socket("192.168.1.110", 12345); // Conectar al servidor en localhost:12345
+            Socket socket = new Socket("192.168.1.103", 12345); // Conectar al servidor en localhost:12345
             
             // Obtener el OutputStream para enviar datos al servidor
             OutputStream outputStream = socket.getOutputStream();

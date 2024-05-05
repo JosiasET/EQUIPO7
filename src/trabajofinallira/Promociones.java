@@ -183,7 +183,7 @@ public class Promociones extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_promo2ActionPerformed
 
     private void btn_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresarActionPerformed
-        InicioCarwash i = new InicioCarwash();
+        Principal i = new Principal();
         i.setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_regresarActionPerformed
