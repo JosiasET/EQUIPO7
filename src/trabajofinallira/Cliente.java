@@ -7,97 +7,74 @@ package trabajofinallira;
  *
  * @author Usuario
  */
-
-
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.*;
 import java.net.*;
+import com.google.gson.Gson;
+
 public class Cliente {
-    private String nombre;
-    private String apellido;
-    private String tipoVehiculo;
-    private String horaLavado;
-    private String tipo;
-    
-    // Constructor
-    public Cliente(String nombre, String apellido, String tipoVehiculo, String horaLavado, String tip) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.tipoVehiculo = tipoVehiculo;
-        this.horaLavado = horaLavado;
-        this.tipo = tip;
-    }
+    private Socket socket; // Variable de instancia para el socket
 
-    // Getters y Setters para todos los atributos
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getTipoVehiculo() {
-        return tipoVehiculo;
-    }
-
-    public void setTipoVehiculo(String tipoVehiculo) {
-        this.tipoVehiculo = tipoVehiculo;
-    }
-
-    public String getHoraLavado() {
-        return horaLavado;
-    }
-
-    public void setHoraLavado(String horaLavado) {
-        this.horaLavado = horaLavado;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-    
-    
-
-    @Override
-    public String toString() {
-        return "\n   Cliente " +
-                "\nnombre: " + nombre +
-                "\napellido: " + apellido+
-                "\ntipoVehiculo: " + tipoVehiculo +
-                "\nhoraLavado: " + horaLavado +
-                "\nServicio: "+ tipo;
-    }
-        
-     public void enviarDatosAlServidor() {
+    // Constructor que recibe la IP y el puerto del servidor
+    public Cliente(String ip, int puerto) {
         try {
-            Socket socket = new Socket("192.168.100.48", 12345); // Conectar al servidor en localhost:12345
-            
-            // Obtener el OutputStream para enviar datos al servidor
-            OutputStream outputStream = socket.getOutputStream();
-            PrintWriter escritor = new PrintWriter(outputStream, true);
-            
-            // Enviar los datos del cliente al servidor
-            escritor.println(this.toString());
-            
-            // Cerrar conexiones
-            escritor.close();
-            outputStream.close();
-            socket.close();
+            this.socket = new Socket(ip, puerto); // Conectar al servidor
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }   
+    }
+
+    // Resto de métodos de la clase...
+
+    public void desconectar() {
+        // Cerrar conexiones
+        if (socket != null && !socket.isClosed()) {
+            try {
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void enviarSolicitud(Solicitud solicitud) {
+        try {
+            // Obtener el OutputStream para enviar datos al servidor
+            OutputStream outputStream = socket.getOutputStream();
+            PrintWriter escritor = new PrintWriter(outputStream, true);
+
+            // Convertir la solicitud a JSON
+            Gson gson = new Gson();
+            String json = gson.toJson(solicitud);
+
+            // Enviar la solicitud al servidor
+            escritor.println(json);
+
+            
+            escritor.close();
+            outputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+     public void recibirRespuesta() {
+        try {
+            // Obtener el InputStream para recibir datos del servidor
+            InputStream inputStream = socket.getInputStream();
+            BufferedReader lector = new BufferedReader(new InputStreamReader(inputStream));
+
+            // Leer la respuesta del servidor
+            String respuesta = lector.readLine();
+            System.out.println("Respuesta del servidor: " + respuesta);
+
+            // Cerrar el lector y el inputStream (no cerramos el socket en este método)
+            lector.close();
+            inputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

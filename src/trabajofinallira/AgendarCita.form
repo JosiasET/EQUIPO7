@@ -124,7 +124,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\Josty25\Documents\NetBeansProjects\EQUIPO7\src\com\mycompany\proyectofinal\Imagenes\Simon2XD.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="TIPO DE VEHICULO"/>
+            <Property name="text" type="java.lang.String" value="MARCA"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

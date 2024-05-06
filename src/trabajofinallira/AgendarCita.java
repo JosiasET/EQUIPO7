@@ -81,7 +81,7 @@ public class AgendarCita extends javax.swing.JFrame {
         vehiculo.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         vehiculo.setForeground(new java.awt.Color(255, 255, 255));
         vehiculo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
-        vehiculo.setText("TIPO DE VEHICULO");
+        vehiculo.setText("MARCA");
         jPanel1.add(vehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 178, 31));
 
         hora.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -212,8 +212,10 @@ public class AgendarCita extends javax.swing.JFrame {
         String horaLavado=Hora_Cliente.getText(); 
         String tip = Tipo_Servicios.getText();
         
-        Cliente cliente= new Cliente(nombre,apellido,tipoVehiculo,horaLavado, tip);
-        cliente.enviarDatosAlServidor();
+        Solicitud solicitud = new Solicitud(nombre, apellido, tipoVehiculo, horaLavado, tip);
+        
+        Cliente cliente= new Cliente("192.168.100.57", 1020);
+        cliente.enviarSolicitud(solicitud);
        
         AlmecenarCliente.append(cliente.toString());
     
