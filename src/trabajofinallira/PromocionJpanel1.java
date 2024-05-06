@@ -93,23 +93,23 @@ public class PromocionJpanel1 extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_Reservar2)
                     .addComponent(btn_Reservar1))
-                .addGap(396, 396, 396))
+                .addGap(503, 503, 503))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 470));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btn_Reservar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Reservar1ActionPerformed
-        AgendarCita a = new AgendarCita();
-        a.setVisible(true);
-        SwingUtilities.getWindowAncestor(PromocionJpanel1.this).dispose();
-    }//GEN-LAST:event_btn_Reservar1ActionPerformed
 
     private void btn_Reservar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Reservar2ActionPerformed
         AgendarCita a = new AgendarCita();
         a.setVisible(true);
         SwingUtilities.getWindowAncestor(PromocionJpanel1.this).dispose();
     }//GEN-LAST:event_btn_Reservar2ActionPerformed
+
+    private void btn_Reservar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Reservar1ActionPerformed
+        AgendarCita a = new AgendarCita();
+        a.setVisible(true);
+        SwingUtilities.getWindowAncestor(PromocionJpanel1.this).dispose();
+    }//GEN-LAST:event_btn_Reservar1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

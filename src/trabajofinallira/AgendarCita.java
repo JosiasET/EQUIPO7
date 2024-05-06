@@ -70,69 +70,69 @@ public class AgendarCita extends javax.swing.JFrame {
         Nombre.setForeground(new java.awt.Color(255, 255, 255));
         Nombre.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         Nombre.setText("DIGITE EL NOMBRE DEL CLIENTE ");
-        jPanel1.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 134, 260, 29));
+        jPanel1.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 260, 29));
 
         telefono.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         telefono.setForeground(new java.awt.Color(255, 255, 255));
         telefono.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         telefono.setText("NUMERO DE TEFONO DEL CLIENTE");
-        jPanel1.add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 181, 260, 28));
+        jPanel1.add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 260, 28));
 
         vehiculo.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         vehiculo.setForeground(new java.awt.Color(255, 255, 255));
         vehiculo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         vehiculo.setText("TIPO DE VEHICULO");
-        jPanel1.add(vehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 221, 178, 31));
+        jPanel1.add(vehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 178, 31));
 
         hora.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         hora.setForeground(new java.awt.Color(255, 255, 255));
         hora.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         hora.setText("HORA DEL LAVADO");
-        jPanel1.add(hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 270, 178, 27));
+        jPanel1.add(hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 178, 27));
 
         ser.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         ser.setForeground(new java.awt.Color(255, 255, 255));
         ser.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         ser.setText("SERVICIO O PROMOCION: ");
-        jPanel1.add(ser, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 309, 220, 27));
+        jPanel1.add(ser, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 220, 27));
 
         Nombre_Tex.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Nombre_TexActionPerformed(evt);
             }
         });
-        jPanel1.add(Nombre_Tex, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 280, 29));
+        jPanel1.add(Nombre_Tex, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 280, 29));
 
         Numero_Telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Numero_TelefonoActionPerformed(evt);
             }
         });
-        jPanel1.add(Numero_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 280, 28));
-        jPanel1.add(Marco_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 280, 31));
-        jPanel1.add(Hora_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 280, 27));
+        jPanel1.add(Numero_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 280, 28));
+        jPanel1.add(Marco_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 280, 31));
+        jPanel1.add(Hora_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, 280, 27));
 
         Guardar.setBackground(new java.awt.Color(0, 204, 204));
         Guardar.setForeground(new java.awt.Color(0, 0, 0));
-        Guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyectofinal/Imagenes/SaveXD.png"))); // NOI18N
+        Guardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\SaveXD.png")); // NOI18N
         Guardar.setText("Guardar");
         Guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 371, 124, -1));
+        jPanel1.add(Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 480, 124, -1));
 
         btn_Regresar.setBackground(new java.awt.Color(0, 204, 204));
         btn_Regresar.setForeground(new java.awt.Color(0, 0, 0));
-        btn_Regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyectofinal/Imagenes/Simon1XD.png"))); // NOI18N
+        btn_Regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon1XD.png")); // NOI18N
         btn_Regresar.setText("Regresar");
         btn_Regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_RegresarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 120, -1));
+        jPanel1.add(btn_Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 120, -1));
 
         btn_Editar.setText("Editar");
         btn_Editar.addActionListener(new java.awt.event.ActionListener() {
@@ -177,7 +177,7 @@ public class AgendarCita extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, -1, -1));
-        jPanel1.add(Tipo_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 280, 27));
+        jPanel1.add(Tipo_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 280, 27));
 
         jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondoAzulXD.png")); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 680));

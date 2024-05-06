@@ -33,7 +33,7 @@ public class Principal extends javax.swing.JFrame {
         btn_Agendar = new javax.swing.JButton();
         btn_Servicios = new javax.swing.JButton();
         btn_Promociones = new javax.swing.JButton();
-        btn_apuntes = new javax.swing.JButton();
+        btn_Empleados = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,22 +61,32 @@ public class Principal extends javax.swing.JFrame {
         btn_Servicios.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton6.png")); // NOI18N
         btn_Servicios.setText("SERVICIOS");
         btn_Servicios.setContentAreaFilled(false);
+        btn_Servicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ServiciosActionPerformed(evt);
+            }
+        });
         jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 270, -1));
 
         btn_Promociones.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton3.png")); // NOI18N
         btn_Promociones.setText("PROMOCIONES");
         btn_Promociones.setContentAreaFilled(false);
-        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 280, -1));
-
-        btn_apuntes.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton4.png")); // NOI18N
-        btn_apuntes.setText("APUNTES");
-        btn_apuntes.setContentAreaFilled(false);
-        btn_apuntes.addActionListener(new java.awt.event.ActionListener() {
+        btn_Promociones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_apuntesActionPerformed(evt);
+                btn_PromocionesActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_apuntes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 260, 70));
+        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 280, -1));
+
+        btn_Empleados.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton4.png")); // NOI18N
+        btn_Empleados.setText("APUNTES");
+        btn_Empleados.setContentAreaFilled(false);
+        btn_Empleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_EmpleadosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 260, 70));
 
         fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\fondo.jpg")); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -105,9 +115,22 @@ public class Principal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btn_AgendarActionPerformed
 
-    private void btn_apuntesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_apuntesActionPerformed
+    private void btn_EmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EmpleadosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_apuntesActionPerformed
+    }//GEN-LAST:event_btn_EmpleadosActionPerformed
+
+    private void btn_ServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ServiciosActionPerformed
+        Servicios s = new Servicios();
+        s.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_btn_ServiciosActionPerformed
+
+    private void btn_PromocionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PromocionesActionPerformed
+        Promociones p = new Promociones();
+        p.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_PromocionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,9 +169,9 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Agendar;
+    private javax.swing.JButton btn_Empleados;
     private javax.swing.JButton btn_Promociones;
     private javax.swing.JButton btn_Servicios;
-    private javax.swing.JButton btn_apuntes;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

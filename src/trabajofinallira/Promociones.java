@@ -42,10 +42,10 @@ public class Promociones extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btn_regresar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btn_promo2 = new javax.swing.JButton();
         PanelPromociones = new javax.swing.JPanel();
         btn_promo1 = new javax.swing.JButton();
         jLabel2Oferta = new javax.swing.JLabel();
-        btn_promo2 = new javax.swing.JButton();
         btn_promo3 = new javax.swing.JButton();
         jLabel2Fondo = new javax.swing.JLabel();
 
@@ -58,7 +58,7 @@ public class Promociones extends javax.swing.JFrame {
         btn_regresar.setBackground(new java.awt.Color(0, 51, 204));
         btn_regresar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_regresar.setForeground(new java.awt.Color(255, 255, 255));
-        btn_regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Imagen_regreso.png"))); // NOI18N
+        btn_regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\Imagen_regreso.png")); // NOI18N
         btn_regresar.setContentAreaFilled(false);
         btn_regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,8 +69,20 @@ public class Promociones extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Barlow Black", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel1.setText("PROMOCIONES");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 22, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\OfertasXD.png")); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, -1, 110));
+
+        btn_promo2.setBackground(new java.awt.Color(102, 255, 204));
+        btn_promo2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn_promo2.setForeground(new java.awt.Color(0, 0, 0));
+        btn_promo2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Precios.png")); // NOI18N
+        btn_promo2.setText("2da Promociones");
+        btn_promo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_promo2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_promo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, -1, -1));
 
         PanelPromociones.setBackground(new java.awt.Color(0, 0, 0));
         PanelPromociones.setOpaque(false);
@@ -80,11 +92,11 @@ public class Promociones extends javax.swing.JFrame {
         PanelPromociones.setLayout(PanelPromocionesLayout);
         PanelPromocionesLayout.setHorizontalGroup(
             PanelPromocionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 850, Short.MAX_VALUE)
         );
         PanelPromocionesLayout.setVerticalGroup(
             PanelPromocionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
         jPanel1.add(PanelPromociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 143, -1, 440));
@@ -99,22 +111,10 @@ public class Promociones extends javax.swing.JFrame {
                 btn_promo1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_promo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+        jPanel1.add(btn_promo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
 
         jLabel2Oferta.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Ofertas XD.png")); // NOI18N
-        jPanel1.add(jLabel2Oferta, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, -1, -1));
-
-        btn_promo2.setBackground(new java.awt.Color(102, 255, 204));
-        btn_promo2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn_promo2.setForeground(new java.awt.Color(0, 0, 0));
-        btn_promo2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Precios.png")); // NOI18N
-        btn_promo2.setText("2da Promociones");
-        btn_promo2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_promo2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_promo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, -1, -1));
+        jPanel1.add(jLabel2Oferta, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, -1, -1));
 
         btn_promo3.setBackground(new java.awt.Color(51, 255, 204));
         btn_promo3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -126,9 +126,9 @@ public class Promociones extends javax.swing.JFrame {
                 btn_promo3ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_promo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, -1, -1));
+        jPanel1.add(btn_promo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, -1, -1));
 
-        jLabel2Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyectofinal/Imagenes/FondosPs3.jpg"))); // NOI18N
+        jLabel2Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondosPs3.jpg")); // NOI18N
         jPanel1.add(jLabel2Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -159,9 +159,6 @@ public class Promociones extends javax.swing.JFrame {
         PanelPromociones.revalidate();
     }//GEN-LAST:event_btn_promo1ActionPerformed
 
-    public void init(){
-        
-    }
     private void btn_promo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_promo3ActionPerformed
         PromocionesJpanel3 p3 = new PromocionesJpanel3();
         p3.setSize(850, 435);
