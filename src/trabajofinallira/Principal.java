@@ -44,7 +44,7 @@ public class Principal extends javax.swing.JFrame {
                 btn_AgendarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 210, -1));
+        jPanel1.add(btn_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 210, -1));
 
         btn_Servicios.setText("SERVICIOS");
         jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 210, -1));
@@ -59,8 +59,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn_apuntes, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 210, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondosPs3.jpg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
