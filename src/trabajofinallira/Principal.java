@@ -15,6 +15,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -27,39 +28,58 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         btn_Agendar = new javax.swing.JButton();
         btn_Servicios = new javax.swing.JButton();
         btn_Promociones = new javax.swing.JButton();
         btn_apuntes = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\Logo.png")); // NOI18N
+        logo.setText("Logo");
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\titulo.png")); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+
+        btn_Agendar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\botonf.png")); // NOI18N
         btn_Agendar.setText("AGENDAR CLIENTES");
+        btn_Agendar.setContentAreaFilled(false);
         btn_Agendar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_AgendarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 210, -1));
+        jPanel1.add(btn_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 280, 70));
 
+        btn_Servicios.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton6.png")); // NOI18N
         btn_Servicios.setText("SERVICIOS");
-        jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 210, -1));
+        btn_Servicios.setContentAreaFilled(false);
+        jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 270, -1));
 
+        btn_Promociones.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton3.png")); // NOI18N
         btn_Promociones.setText("PROMOCIONES");
-        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 210, -1));
+        btn_Promociones.setContentAreaFilled(false);
+        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 280, -1));
 
+        btn_apuntes.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton4.png")); // NOI18N
         btn_apuntes.setText("APUNTES");
+        btn_apuntes.setContentAreaFilled(false);
         btn_apuntes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_apuntesActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_apuntes, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 210, -1));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(btn_apuntes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 260, 70));
+
+        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\fondo.jpg")); // NOI18N
+        jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -129,7 +149,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_Promociones;
     private javax.swing.JButton btn_Servicios;
     private javax.swing.JButton btn_apuntes;
+    private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel logo;
     // End of variables declaration//GEN-END:variables
 }

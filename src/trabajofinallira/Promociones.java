@@ -65,7 +65,7 @@ public class Promociones extends javax.swing.JFrame {
                 btn_regresarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 48, 80, 50));
+        jPanel1.add(btn_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 80, 50));
 
         jLabel1.setFont(new java.awt.Font("Barlow Black", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 204));
@@ -128,7 +128,7 @@ public class Promociones extends javax.swing.JFrame {
         });
         jPanel1.add(btn_promo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, -1, -1));
 
-        jLabel2Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondosPs3.jpg")); // NOI18N
+        jLabel2Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyectofinal/Imagenes/FondosPs3.jpg"))); // NOI18N
         jPanel1.add(jLabel2Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

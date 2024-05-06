@@ -68,6 +68,7 @@ public class Servicios extends javax.swing.JFrame{
         jLabel2.setText("SERVICIOS");
         PanelPrincipal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 6, 229, 76));
 
+        PanellMostrar.setOpaque(false);
         PanellMostrar.setPreferredSize(new java.awt.Dimension(850, 500));
 
         javax.swing.GroupLayout PanellMostrarLayout = new javax.swing.GroupLayout(PanellMostrar);

@@ -87,6 +87,7 @@
         </Component>
         <Container class="javax.swing.JPanel" name="PanellMostrar">
           <Properties>
+            <Property name="opaque" type="boolean" value="false"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[850, 500]"/>
             </Property>
