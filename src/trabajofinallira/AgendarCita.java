@@ -48,6 +48,8 @@ public class AgendarCita extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         AlmecenarCliente = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         Tipo_Servicios = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
@@ -62,37 +64,31 @@ public class AgendarCita extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo.setFont(new java.awt.Font("Barlow Black", 3, 24)); // NOI18N
-        Titulo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Login.png")); // NOI18N
         Titulo.setText("  HOLA ¿AQUIEN VAMOS A GREGAR HOY?");
         jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 530, -1));
 
         Nombre.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         Nombre.setForeground(new java.awt.Color(255, 255, 255));
-        Nombre.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         Nombre.setText("DIGITE EL NOMBRE DEL CLIENTE ");
         jPanel1.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 260, 29));
 
         telefono.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         telefono.setForeground(new java.awt.Color(255, 255, 255));
-        telefono.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         telefono.setText("NUMERO DE TEFONO DEL CLIENTE");
         jPanel1.add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 260, 28));
 
         vehiculo.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         vehiculo.setForeground(new java.awt.Color(255, 255, 255));
-        vehiculo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         vehiculo.setText("MARCA");
         jPanel1.add(vehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 178, 31));
 
         hora.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         hora.setForeground(new java.awt.Color(255, 255, 255));
-        hora.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         hora.setText("HORA DEL LAVADO");
         jPanel1.add(hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 178, 27));
 
         ser.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         ser.setForeground(new java.awt.Color(255, 255, 255));
-        ser.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
         ser.setText("SERVICIO O PROMOCION: ");
         jPanel1.add(ser, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 220, 27));
 
@@ -114,7 +110,6 @@ public class AgendarCita extends javax.swing.JFrame {
 
         Guardar.setBackground(new java.awt.Color(0, 204, 204));
         Guardar.setForeground(new java.awt.Color(0, 0, 0));
-        Guardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\SaveXD.png")); // NOI18N
         Guardar.setText("Guardar");
         Guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +120,6 @@ public class AgendarCita extends javax.swing.JFrame {
 
         btn_Regresar.setBackground(new java.awt.Color(0, 204, 204));
         btn_Regresar.setForeground(new java.awt.Color(0, 0, 0));
-        btn_Regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon1XD.png")); // NOI18N
         btn_Regresar.setText("Regresar");
         btn_Regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,22 +141,35 @@ public class AgendarCita extends javax.swing.JFrame {
 
         jLabel7.setText("LISTA DE CLIENTES ");
 
+        jButton1.setText("Guardar");
+
+        jButton2.setText("IMPRIMIR TIKET");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btn_Editar)
-                .addGap(133, 133, 133))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(109, 109, 109))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(btn_Editar)
+                .addGap(31, 31, 31)
+                .addComponent(jButton1)
+                .addGap(27, 27, 27)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,15 +178,16 @@ public class AgendarCita extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_Editar)
-                .addGap(19, 19, 19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_Editar)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(13, 13, 13))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, -1, -1));
         jPanel1.add(Tipo_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 280, 27));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\FondoAzulXD.png")); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 680));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -214,10 +222,10 @@ public class AgendarCita extends javax.swing.JFrame {
         
         Solicitud solicitud = new Solicitud(nombre, apellido, tipoVehiculo, horaLavado, tip);
         
-        Cliente cliente= new Cliente("192.168.100.57", 1020);
+        Cliente cliente= new Cliente("192.168.100.57",1020);
         cliente.enviarSolicitud(solicitud);
        
-        AlmecenarCliente.append(cliente.toString());
+        AlmecenarCliente.append(solicitud.toString());
     
         
         Nombre_Tex.setText("");
@@ -238,6 +246,10 @@ public class AgendarCita extends javax.swing.JFrame {
     private void btn_EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditarActionPerformed
         AlmecenarCliente.setEditable(true);
     }//GEN-LAST:event_btn_EditarActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,6 +299,8 @@ public class AgendarCita extends javax.swing.JFrame {
     private javax.swing.JButton btn_Editar;
     private javax.swing.JButton btn_Regresar;
     private javax.swing.JLabel hora;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
