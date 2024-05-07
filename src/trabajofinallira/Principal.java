@@ -56,7 +56,7 @@ public class Principal extends javax.swing.JFrame {
                 btn_AgendarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 280, 70));
+        jPanel1.add(btn_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 280, 70));
 
         btn_Servicios.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton6.png")); // NOI18N
         btn_Servicios.setText("SERVICIOS");
@@ -66,7 +66,7 @@ public class Principal extends javax.swing.JFrame {
                 btn_ServiciosActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 270, -1));
+        jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 270, 70));
 
         btn_Promociones.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton3.png")); // NOI18N
         btn_Promociones.setText("PROMOCIONES");
@@ -76,7 +76,7 @@ public class Principal extends javax.swing.JFrame {
                 btn_PromocionesActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 280, -1));
+        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 280, -1));
 
         btn_Empleados.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton4.png")); // NOI18N
         btn_Empleados.setText("APUNTES");
@@ -86,7 +86,7 @@ public class Principal extends javax.swing.JFrame {
                 btn_EmpleadosActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 260, 70));
+        jPanel1.add(btn_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 260, 70));
 
         fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\fondo.jpg")); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
