@@ -70,7 +70,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\Josty25\Documents\NetBeansProjects\EQUIPO7\src\com\mycompany\proyectofinal\Imagenes\Login.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="  HOLA &#xbf;AQUIEN VAMOS A GREGAR HOY?"/>
+            <Property name="text" type="java.lang.String" value="  HOLA &#xbf;AQUIEN VAMOS AGREGAR HOY?"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -108,11 +108,11 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\Josty25\Documents\NetBeansProjects\EQUIPO7\src\com\mycompany\proyectofinal\Imagenes\Simon2XD.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="NUMERO DE TEFONO DEL CLIENTE"/>
+            <Property name="text" type="java.lang.String" value="NUMERO DE TELEFONO DEL CLIENTE"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="50" y="190" width="260" height="28"/>
+              <AbsoluteConstraints x="50" y="190" width="280" height="28"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -146,7 +146,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\Josty25\Documents\NetBeansProjects\EQUIPO7\src\com\mycompany\proyectofinal\Imagenes\Simon2XD.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="HORA DEL LAVADO"/>
+            <Property name="text" type="java.lang.String" value="PRECIO"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -201,6 +201,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="Hora_Cliente">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Hora_ClienteActionPerformed"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="330" y="320" width="280" height="27"/>

@@ -10,3 +10,8 @@
 "apellido: 13884813"
 "tipoVehiculo: nose"
 "horaLavado: 813u8"
+"{\"nombre\":\"Josias\",\"apellido\":\"1124124\",\"tipoVehiculo\":\"124124\",\"horaLavado\":\"124124124\",\"tipo\":\"124124\"}"
+"{\"nombre\":\"efefwefwef\",\"apellido\":\"\",\"tipoVehiculo\":\"\",\"horaLavado\":\"\",\"tipo\":\"\"}"
+
+ "{\"nombre\":\"wbefwef\",\"apellido\":\"wefwef\",\"tipoVehiculo\":\"wefwef\",\"horaLavado\":\"wfewefw\",\"tipo\":\"wefwef\"}"
+"{\"nombre\":\"1212\",\"apellido\":\"123123142\",\"tipoVehiculo\":\"124124\",\"horaLavado\":\"124124124\",\"tipo\":\"142124124\"}"

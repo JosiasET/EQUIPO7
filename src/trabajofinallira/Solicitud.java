@@ -4,6 +4,7 @@
  */
 package trabajofinallira;
 
+
 /**
  *
  * @author Josty25
@@ -65,11 +66,11 @@ public class Solicitud {
     }
     
     public String toString() {
-        return "\n   Solicitud " +
+        return "\nSolicitud" +
                 "\nnombre: " + nombre +
-                "\napellido: " + apellido +
-                "\ntipoVehiculo: " + tipoVehiculo +
-                "\nhoraLavado: " + horaLavado +
+                "\nNumero: " + apellido +
+                "\ntipoVehiculo :" + tipoVehiculo +
+                "\nhoraLavado :" + horaLavado +
                 "\nServicio: " + tipo;
     }
     

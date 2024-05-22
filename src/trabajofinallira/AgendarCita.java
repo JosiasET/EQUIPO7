@@ -10,6 +10,7 @@ package trabajofinallira;
  */
 public class AgendarCita extends javax.swing.JFrame {
 
+    Tiket ticket = new Tiket();
     /**
      * Creates new form AgendarCita
      */
@@ -66,7 +67,7 @@ public class AgendarCita extends javax.swing.JFrame {
         Titulo.setFont(new java.awt.Font("Barlow Black", 3, 24)); // NOI18N
         Titulo.setForeground(new java.awt.Color(255, 255, 255));
         Titulo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Login.png")); // NOI18N
-        Titulo.setText("  HOLA ¿AQUIEN VAMOS A GREGAR HOY?");
+        Titulo.setText("  HOLA ¿AQUIEN VAMOS AGREGAR HOY?");
         jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 530, -1));
 
         Nombre.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -78,8 +79,8 @@ public class AgendarCita extends javax.swing.JFrame {
         telefono.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         telefono.setForeground(new java.awt.Color(255, 255, 255));
         telefono.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
-        telefono.setText("NUMERO DE TEFONO DEL CLIENTE");
-        jPanel1.add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 260, 28));
+        telefono.setText("NUMERO DE TELEFONO DEL CLIENTE");
+        jPanel1.add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 280, 28));
 
         vehiculo.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         vehiculo.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +91,7 @@ public class AgendarCita extends javax.swing.JFrame {
         hora.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         hora.setForeground(new java.awt.Color(255, 255, 255));
         hora.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\com\\mycompany\\proyectofinal\\Imagenes\\Simon2XD.png")); // NOI18N
-        hora.setText("HORA DEL LAVADO");
+        hora.setText("PRECIO");
         jPanel1.add(hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 178, 27));
 
         ser.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -113,6 +114,12 @@ public class AgendarCita extends javax.swing.JFrame {
         });
         jPanel1.add(Numero_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 280, 28));
         jPanel1.add(Marco_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 280, 31));
+
+        Hora_Cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hora_ClienteActionPerformed(evt);
+            }
+        });
         jPanel1.add(Hora_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, 280, 27));
 
         Guardar.setBackground(new java.awt.Color(0, 204, 204));
@@ -230,24 +237,27 @@ public class AgendarCita extends javax.swing.JFrame {
         String nombre=Nombre_Tex.getText();
         String apellido=Numero_Telefono.getText(); 
         String tipoVehiculo=Marco_Cliente.getText();
-        String horaLavado=Hora_Cliente.getText(); 
+        String horaLavado = Hora_Cliente.getText(); 
         String tip = Tipo_Servicios.getText();
         
         Solicitud solicitud = new Solicitud(nombre, apellido, tipoVehiculo, horaLavado, tip);
         
-        Cliente cliente= new Cliente("192.168.100.57",1020);
+        Cliente cliente= new Cliente("192.168.1.110",1020);
         cliente.enviarSolicitud(solicitud);
+        
+        if(ticket == null){
+            ticket = new Tiket();
+        }
        
         AlmecenarCliente.append(solicitud.toString());
     
+        ticket.guardarDatos(nombre, tip, horaLavado);
         
         Nombre_Tex.setText("");
         Numero_Telefono.setText(""); 
         Marco_Cliente.setText("");
         Hora_Cliente.setText("");
         Tipo_Servicios.setText("");
-        
-        
     }//GEN-LAST:event_GuardarActionPerformed
 
     private void btn_RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegresarActionPerformed
@@ -263,46 +273,16 @@ public class AgendarCita extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Tiket t = new Tiket();
         t.setVisible(true);
-        
-        
-        
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void Hora_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hora_ClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Hora_ClienteActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgendarCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgendarCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgendarCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgendarCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AgendarCita().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea AlmecenarCliente;

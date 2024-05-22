@@ -33,7 +33,6 @@ public class Principal extends javax.swing.JFrame {
         btn_Agendar = new javax.swing.JButton();
         btn_Servicios = new javax.swing.JButton();
         btn_Promociones = new javax.swing.JButton();
-        btn_Empleados = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,7 +65,7 @@ public class Principal extends javax.swing.JFrame {
                 btn_ServiciosActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 270, 70));
+        jPanel1.add(btn_Servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 270, 70));
 
         btn_Promociones.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton3.png")); // NOI18N
         btn_Promociones.setText("PROMOCIONES");
@@ -76,17 +75,7 @@ public class Principal extends javax.swing.JFrame {
                 btn_PromocionesActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 280, -1));
-
-        btn_Empleados.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\boton4.png")); // NOI18N
-        btn_Empleados.setText("APUNTES");
-        btn_Empleados.setContentAreaFilled(false);
-        btn_Empleados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_EmpleadosActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 260, 70));
+        jPanel1.add(btn_Promociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 280, -1));
 
         fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Josty25\\Documents\\NetBeansProjects\\EQUIPO7\\src\\Imagenes\\fondo.jpg")); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -115,10 +104,6 @@ public class Principal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btn_AgendarActionPerformed
 
-    private void btn_EmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EmpleadosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_EmpleadosActionPerformed
-
     private void btn_ServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ServiciosActionPerformed
         Servicios s = new Servicios();
         s.setVisible(true);
@@ -136,29 +121,6 @@ public class Principal extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -169,7 +131,6 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Agendar;
-    private javax.swing.JButton btn_Empleados;
     private javax.swing.JButton btn_Promociones;
     private javax.swing.JButton btn_Servicios;
     private javax.swing.JLabel fondo;
