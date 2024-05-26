@@ -43,7 +43,7 @@ public class Servidor {
             String mensajeJson = gson.toJson(mensaje);
             
             FileWriter escritor = new FileWriter("mensajes.txt", true);
-            escritor.write("\n "+mensajeJson + "\n");
+            escritor.write(mensajeJson + "\n");
             escritor.close();
         } catch (IOException e) {
             e.printStackTrace();

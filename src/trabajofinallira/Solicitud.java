@@ -4,6 +4,9 @@
  */
 package trabajofinallira;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 /**
  *
@@ -16,6 +19,10 @@ public class Solicitud {
     private String horaLavado;
     private String tipo;
 
+    // Constructor sin argumentos
+    public Solicitud() {
+    }
+    
     public Solicitud(String nombre, String apellido, String tipoVehiculo, String horaLavado, String tipo) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -24,7 +31,9 @@ public class Solicitud {
         this.tipo = tipo;
     }
     
-    
+
+
+    // Getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -64,14 +73,15 @@ public class Solicitud {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    
+
+    // Método toString para representar la solicitud como cadena
+    @Override
     public String toString() {
-        return "\nSolicitud" +
-                "\nnombre: " + nombre +
-                "\nNumero: " + apellido +
-                "\ntipoVehiculo :" + tipoVehiculo +
-                "\nhoraLavado :" + horaLavado +
-                "\nServicio: " + tipo;
+        return "Solicitud" +
+                "Nombre: " + nombre + "\n" +
+                "Numero:" + apellido + "\n" +
+                "Tipo de Vehiculo: " + tipoVehiculo + "\n" +
+                "HoraLavado" + horaLavado + "\n" +
+                "Tipo:" + tipo + "\n";
     }
-    
 }

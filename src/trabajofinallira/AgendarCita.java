@@ -245,6 +245,7 @@ public class AgendarCita extends javax.swing.JFrame {
         Cliente cliente= new Cliente("192.168.1.110",1020);
         cliente.enviarSolicitud(solicitud);
         
+        
         if(ticket == null){
             ticket = new Tiket();
         }

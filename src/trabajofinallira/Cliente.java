@@ -3,30 +3,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package trabajofinallira;
-/**
- *
- * @author Usuario
- */
+
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.*;
-import java.net.*;
+import java.io.OutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
 import com.google.gson.Gson;
 
 public class Cliente {
-    private Socket socket; // Variable de instancia para el socket
+    private Socket socket;
+    private String ip;
+    private int puerto;
 
-    // Constructor que recibe la IP y el puerto del servidor
     public Cliente(String ip, int puerto) {
+        this.ip = ip;
+        this.puerto = puerto;
+    }
+
+    public void conectar() {
         try {
             this.socket = new Socket(ip, puerto); // Conectar al servidor
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    // Resto de métodos de la clase...
 
     public void desconectar() {
         // Cerrar conexiones
@@ -39,42 +43,77 @@ public class Cliente {
         }
     }
 
-    public void enviarSolicitud(Solicitud solicitud) {
+    public void enviar(String mensaje, String tipo) {
         try {
+            // Crear una instancia de Mensaje
+            Mensaje msg = new Mensaje(tipo, mensaje);
+
+            // Convertir el mensaje a JSON
+            Gson gson = new Gson();
+            String json = gson.toJson(msg);
+
             // Obtener el OutputStream para enviar datos al servidor
             OutputStream outputStream = socket.getOutputStream();
             PrintWriter escritor = new PrintWriter(outputStream, true);
 
-            // Convertir la solicitud a JSON
-            Gson gson = new Gson();
-            String json = gson.toJson(solicitud);
-
-            // Enviar la solicitud al servidor
+            // Enviar el mensaje al servidor
             escritor.println(json);
-
-            
-            escritor.close();
-            outputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
-     public void recibirRespuesta() {
+
+    public String recibir() {
+        String respuesta = null;
         try {
             // Obtener el InputStream para recibir datos del servidor
             InputStream inputStream = socket.getInputStream();
             BufferedReader lector = new BufferedReader(new InputStreamReader(inputStream));
 
             // Leer la respuesta del servidor
-            String respuesta = lector.readLine();
-            System.out.println("Respuesta del servidor: " + respuesta);
-
-            // Cerrar el lector y el inputStream (no cerramos el socket en este método)
-            lector.close();
-            inputStream.close();
+            respuesta = lector.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return respuesta;
+    }
+
+    public void enviarSolicitud(Solicitud solicitud) {
+        conectar();
+        Gson gson = new Gson();
+        String json = gson.toJson(solicitud);
+        enviar(json, "enviar_S");
+        String respuesta = recibir();
+        System.out.println("Respuesta del servidor: " + respuesta);
+        desconectar();
+    }
+    
+    
+    public String RecibirSolicitude(){
+      conectar();
+      enviar("hola", "Mis_Solicitudes");
+      String recibir = recibir();
+      desconectar();
+      return recibir;
+    }
+
+    
+}
+
+class Mensaje {
+    private String tipo;
+    private String mensaje;
+
+    public Mensaje(String tipo, String mensaje) {
+        this.tipo = tipo;
+        this.mensaje = mensaje;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getMensaje() {
+        return mensaje;
     }
 }
